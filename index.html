@@ -27,15 +27,13 @@
             background-image: url('asfalt-light.png');
             background-repeat: repeat;
             background-size: auto;
-            color: #222;
         }
 
         body.dark {
             background-color: #121212;
-        background-image: url('asfalt-dark.png');
-        background-repeat: repeat;
-           background-size: auto;
-           color: #e0e0e0;
+            background-image: url('asfalt-dark.png');
+            background-repeat: repeat;
+            background-size: auto;
         }
 
         header {
@@ -191,15 +189,24 @@
     <footer>
         &copy; 2025 Kirsten Rieger · GitHub Portfolio
     </footer>
-    <script>
-        let currentLang = 'de';
-        function toggleLanguage() {
-            currentLang = currentLang === 'de' ? 'en' : 'de';
-            document.body.className = currentLang === 'de' ? 'light' : 'dark';
-            document.querySelectorAll('.de').forEach(el => el.style.display = currentLang === 'de' ? 'block' : 'none');
-            document.querySelectorAll('.en').forEach(el => el.style.display = currentLang === 'de' ? 'none' : 'block');
-        }
-        toggleLanguage(); // Set to EN initially
-    </script>
+<script>
+    let currentLang = 'de'; // Startsprache = Deutsch
+
+    function toggleLanguage() {
+        currentLang = currentLang === 'de' ? 'en' : 'de';
+
+        document.body.className = currentLang === 'de' ? 'light' : 'dark';
+
+        document.querySelectorAll('.de').forEach(el => el.style.display = currentLang === 'de' ? 'block' : 'none');
+        document.querySelectorAll('.en').forEach(el => el.style.display = currentLang === 'de' ? 'none' : 'block');
+    }
+
+    // Seite initial auf Deutsch setzen (inkl. body-Klasse)
+    document.addEventListener("DOMContentLoaded", () => {
+        document.body.className = 'light';
+        document.querySelectorAll('.de').forEach(el => el.style.display = 'block');
+        document.querySelectorAll('.en').forEach(el => el.style.display = 'none');
+    });
+</script>
 </body>
 </html>
