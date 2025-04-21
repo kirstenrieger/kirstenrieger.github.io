@@ -1,212 +1,207 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kirsten Rieger – Portfolio</title>
-    <style>
-        :root {
-            --bg-light: #ffffff;
-            --text-light: #222;
-            --bg-dark: #121212;
-            --text-dark: #e0e0e0;
-            --accent: #0099ff;
-            --section-light: #f4f4f4;
-            --section-dark: #1e1e1e;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            transition: all 0.4s ease;
-        }
-
-        body.light {
-            background-color: #ffffff;
-            background-image: url('asfalt-light.png');
-            background-repeat: repeat;
-            background-size: auto;
-        }
-
-        body.dark {
-            background-color: #121212;
-            background-image: url('asfalt-dark.png');
-            background-repeat: repeat;
-            background-size: auto;
-        }
-
-        header {
-            padding: 2rem;
-            text-align: center;
-        }
-
-        header img {
-            width: 130px;
-            height: 130px;
-            border-radius: 50%;
-            object-fit: cover;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-
-        header img:hover {
-           transform: scale(1.06);
-            box-shadow: 0 6px 16px rgba(0,0,0,0.3);
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 2rem;
-        }
-
-        header p.role {
-            margin: 0.3rem;
-            font-weight: 500;
-        }
-
-        .lang-toggle {
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
-            background: #333;
-            color: #fff;
-            border: none;
-            padding: 0.4rem 0.8rem;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-
-        main {
-            max-width: 900px;
-            margin: 2rem auto;
-            padding: 1rem;
-        }
-
-        section {
-            margin-bottom: 2rem;
-            padding: 1rem;
-            border-radius: 6px;
-        }
-
-        h2 {
-            color: var(--accent);
-            border-bottom: 1px solid #8884;
-            padding-bottom: 0.3rem;
-        }
-
-        footer {
-            text-align: center;
-            font-size: 0.85rem;
-            margin: 3rem 0 1rem;
-        }
-
-        a {
-            color: var(--accent);
-        }
-
-        .de, .en {
-            display: none;
-        }
-
-        .contact {
-            font-size: 0.95rem;
-            margin-top: 0.5rem;
-        }
-    </style>
-</head>
-<body class="light">
-    <button class="lang-toggle" onclick="toggleLanguage()">EN / DE</button>
-    <header>
-        <img src="profilbild.jpg" alt="Profilbild Kirsten Rieger">
-        <h1>Kirsten Rieger</h1>
-        <p class="role de">Transformation Managerin · Digitalisierung · Change Leadership</p>
-        <p class="role en">Transformation Manager · Digitalization · Change Leadership</p>
-        <p class="contact">
-            ✉️ <a href="mailto:kirsten.rieger@web.de">kirsten.rieger@web.de</a><br>
-            📞 +49 173 200 34 79<br>
-            🔗 <a href="https://www.linkedin.com/in/kirsten-rieger-8057bb130" target="_blank">LinkedIn</a>
-        </p>
-    </header>
-    <main>
-        <section>
-            <div class="de">
-                <h2>Über mich</h2>
-                <p>Ich gestalte Veränderung mit Klarheit, Energie und einem systemischen Blick – von der Strategie bis zur nachhaltigen Umsetzung.</p>
-            </div>
-            <div class="en">
-                <h2>About me</h2>
-                <p>I shape transformation with clarity, energy, and a systemic view – from strategy to sustainable implementation.</p>
-            </div>
-        </section>
-        <section>
-            <div class="de">
-                <h2>Motivationsschreiben</h2>
-                <p><a href="Motivationsschreiben_Kirsten_Rieger.pdf" target="_blank">Motivationsschreiben öffnen</a></p>
-            </div>
-            <div class="en">
-                <h2>Cover Letter</h2>
-                <p><a href="Motivationsschreiben_Kirsten_Rieger.pdf" target="_blank">Open cover letter</a></p>
-            </div>
-        </section>
-        <section>
-            <div class="de">
-                <h2>Lebenslauf</h2>
-                <p><a href="Lebenslauf_Kirsten_Rieger.pdf" target="_blank">Lebenslauf öffnen</a></p>
-            </div>
-            <div class="en">
-                <h2>CV</h2>
-                <p><a href="Lebenslauf_Kirsten_Rieger.pdf" target="_blank">Open CV</a></p>
-            </div>
-        </section>
-        <section>
-            <div class="de">
-                <h2>Arbeitszeugnisse</h2>
-                <ul>
-                    <li><a href="Zeugnis_Mercedes-Benz.pdf" target="_blank">Zeugnis Mercedes-Benz</a></li>
-                    <li><a href="Zeugnis_Philip_Morris.pdf" target="_blank">Zeugnis Philip Morris</a></li>
-                </ul>
-            </div>
-            <div class="en">
-                <h2>References</h2>
-                <ul>
-                    <li><a href="Zeugnis_Mercedes-Benz.pdf" target="_blank">Reference Mercedes-Benz</a></li>
-                    <li><a href="Zeugnis_Philip_Morris.pdf" target="_blank">Reference Philip Morris</a></li>
-                </ul>
-            </div>
-        </section>
-        <section>
-            <div class="de">
-                <h2>Mini-Case / Projektbeispiel</h2>
-                <p>Platzhalter für ein Projektbeispiel – z. B. als PDF oder eingebettete Präsentation.</p>
-            </div>
-            <div class="en">
-                <h2>Mini Case / Project Example</h2>
-                <p>Placeholder for a project sample – e.g. as PDF or embedded presentation.</p>
-            </div>
-        </section>
-    </main>
-    <footer>
-        &copy; 2025 Kirsten Rieger · GitHub Portfolio
-    </footer>
-<script>
-    let currentLang = 'de'; // Startsprache = Deutsch
-
-    function toggleLanguage() {
-        currentLang = currentLang === 'de' ? 'en' : 'de';
-
-        document.body.className = currentLang === 'de' ? 'light' : 'dark';
-
-        document.querySelectorAll('.de').forEach(el => el.style.display = currentLang === 'de' ? 'block' : 'none');
-        document.querySelectorAll('.en').forEach(el => el.style.display = currentLang === 'de' ? 'none' : 'block');
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kirsten Rieger – Portfolio</title>
+  <style>
+    :root {
+      --bg-light: #ffffff;
+      --text-light: #222;
+      --bg-dark: #121212;
+      --text-dark: #f0f0f0;
+      --accent: #0099ff;
     }
 
-    // Seite initial auf Deutsch setzen (inkl. body-Klasse)
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      scroll-behavior: smooth;
+      background-repeat: repeat;
+      background-size: auto;
+      background-attachment: fixed;
+    }
+
+    body.light {
+      background-color: var(--bg-light);
+      color: var(--text-light);
+      background-image: url('asfalt-light.png');
+    }
+
+    body.dark {
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
+      background-image: url('asfalt-dark.png');
+    }
+
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(8px);
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #ccc;
+    }
+
+    body.dark header {
+      background: rgba(18, 18, 18, 0.9);
+      border-bottom: 1px solid #444;
+    }
+
+    header h1 {
+      font-size: 1.2rem;
+      margin: 0;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    .lang-toggle {
+      background: #333;
+      color: #fff;
+      border: none;
+      padding: 0.3rem 0.8rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding-top: 7rem;
+      padding-bottom: 4rem;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .hero img {
+      width: 180px;
+      border-radius: 50%;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    .hero-text h2 {
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    .hero-text p {
+      margin-top: 0.5rem;
+      font-size: 1.1rem;
+      max-width: 500px;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 1rem 2rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 0.3rem;
+      color: var(--accent);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+    }
+
+    a {
+      color: var(--accent);
+    }
+
+    .de, .en {
+      display: none;
+    }
+  </style>
+</head>
+<body class="light">
+  <header>
+    <h1>Kirsten Rieger</h1>
+    <nav>
+      <a href="#about">Über mich</a>
+      <a href="#experience">Erfahrung</a>
+      <a href="#contact">Kontakt</a>
+    </nav>
+    <button class="lang-toggle" onclick="toggleLanguage()">EN/DE</button>
+  </header>
+
+  <div class="hero">
+    <img src="profilbild.jpg" alt="Kirsten Rieger Portrait" />
+    <div class="hero-text">
+      <h2 class="de">Digital Transformation Managerin | Change Leadership</h2>
+      <h2 class="en">Digital Transformation Manager | Change Leadership</h2>
+      <p class="de">Ich gestalte Transformation mit System und Leidenschaft – von der Idee bis zur erfolgreichen Umsetzung.</p>
+      <p class="en">I drive transformation with purpose and structure – from strategy to sustainable implementation.</p>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="de">
+      <h2>Über mich</h2>
+      <p>Ich gestalte Veränderung mit Klarheit, Energie und einem systemischen Blick – von der Strategie bis zur nachhaltigen Umsetzung. Als Führungskraft und Coach entwickle ich Organisationen, Teams und Prozesse zukunftsfähig weiter.</p>
+    </div>
+    <div class="en">
+      <h2>About me</h2>
+      <p>I shape change with clarity, energy and a systemic mindset – from strategy to lasting implementation. As a leader and coach, I guide organizations, teams and processes into a sustainable digital future.</p>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="de">
+      <h2>Berufserfahrung</h2>
+      <p>(Hier wird die chronologische Erfahrung aus dem Lebenslauf eingefügt – folgt im nächsten Schritt)</p>
+    </div>
+    <div class="en">
+      <h2>Experience</h2>
+      <p>(Work experience will be added here – pulled from your CV in the next step)</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="de">
+      <h2>Kontakt</h2>
+      <p>Ich freue mich über Impulse, Kooperationen und neue Wege. Kontakt am besten über LinkedIn oder E-Mail.</p>
+    </div>
+    <div class="en">
+      <h2>Contact</h2>
+      <p>I welcome new impulses, collaborations and opportunities. Best way to get in touch is via LinkedIn or email.</p>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Kirsten Rieger · GitHub Portfolio
+  </footer>
+
+  <script>
+    let currentLang = 'de';
+
+    function toggleLanguage() {
+      currentLang = currentLang === 'de' ? 'en' : 'de';
+      document.body.className = currentLang === 'de' ? 'light' : 'dark';
+
+      document.querySelectorAll('.de').forEach(el => el.style.display = currentLang === 'de' ? 'block' : 'none');
+      document.querySelectorAll('.en').forEach(el => el.style.display = currentLang === 'de' ? 'none' : 'block');
+    }
+
     document.addEventListener("DOMContentLoaded", () => {
-        document.body.className = 'light';
-        document.querySelectorAll('.de').forEach(el => el.style.display = 'block');
-        document.querySelectorAll('.en').forEach(el => el.style.display = 'none');
+      toggleLanguage();
     });
-</script>
+  </script>
 </body>
 </html>

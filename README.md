@@ -1,14 +1,14 @@
 
-# Kirsten Rieger · Online Portfolio
+# Kirsten Rieger · Online Portfolio (DE/EN)
 
-Willkommen auf meiner persönlichen Portfolio-Seite.
+Willkommen auf meiner persönlichen Portfolio-Seite.  
+Die Seite ist zweisprachig (Deutsch/Englisch) aufgebaut und enthält:
 
-Hier finden Sie:
-- Mein Motivationsschreiben
-- Meinen aktuellen Lebenslauf
-- Ausgewählte Arbeitszeugnisse
-- (Optional) Projektbeispiele / Mini-Case
+- Ein Hero-Segment mit Profilfoto, Titel und kurzer Vorstellung
+- Navigation mit Scroll-Funktion zu „Über mich“, „Erfahrung“ und „Kontakt“
+- Sprachumschalter mit Light-/Darkmode-Wechsel
+- Hintergrundmuster in beiden Versionen
 
-Diese Seite wurde erstellt mit [GitHub Pages](https://pages.github.com) und dient der Unterstützung meiner Bewerbungen im Bereich Transformation, Digitalisierung und Change Management.
+Diese Seite wurde für GitHub Pages vorbereitet und kann zur Unterstützung von Bewerbungen verwendet werden.
 
-**Website:** [https://kirstenrieger.github.io](https://kirstenrieger.github.io)
+**Live ansehen:** [https://kirstenrieger.github.io](https://kirstenrieger.github.io)
