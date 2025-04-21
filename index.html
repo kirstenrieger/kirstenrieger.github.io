@@ -6,25 +6,41 @@
     <title>Kirsten Rieger – Portfolio</title>
     <style>
         :root {
-            --bg-color: #121212;
-            --text-color: #e0e0e0;
-            --accent-color: #0099ff;
-            --section-bg: #1e1e1e;
+            --bg-light: #ffffff;
+            --text-light: #222;
+            --bg-dark: #121212;
+            --text-dark: #e0e0e0;
+            --accent: #0099ff;
+            --section-light: #f4f4f4;
+            --section-dark: #1e1e1e;
         }
 
         body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
+            transition: all 0.4s ease;
+        }
+
+        body.light {
+            background-color: var(--bg-light);
+            color: var(--text-light);
+        }
+
+        body.dark {
+            background-color: var(--bg-dark);
+            color: var(--text-dark);
         }
 
         header {
-            background-color: var(--section-bg);
             padding: 2rem;
             text-align: center;
-            position: relative;
+        }
+
+        header img {
+            width: 120px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
         }
 
         header h1 {
@@ -32,9 +48,9 @@
             font-size: 2rem;
         }
 
-        header p {
-            margin: 0.2rem;
-            color: #ccc;
+        header p.role {
+            margin: 0.3rem;
+            font-weight: 500;
         }
 
         .lang-toggle {
@@ -44,7 +60,7 @@
             background: #333;
             color: #fff;
             border: none;
-            padding: 0.3rem 0.7rem;
+            padding: 0.4rem 0.8rem;
             cursor: pointer;
             border-radius: 5px;
         }
@@ -56,40 +72,49 @@
         }
 
         section {
-            background-color: var(--section-bg);
             margin-bottom: 2rem;
             padding: 1rem;
-            border-radius: 5px;
+            border-radius: 6px;
         }
 
         h2 {
-            color: var(--accent-color);
-            border-bottom: 1px solid #444;
+            color: var(--accent);
+            border-bottom: 1px solid #8884;
             padding-bottom: 0.3rem;
-        }
-
-        a {
-            color: var(--accent-color);
         }
 
         footer {
             text-align: center;
-            font-size: 0.9rem;
-            color: #888;
+            font-size: 0.85rem;
             margin: 3rem 0 1rem;
         }
 
-        .en, .de {
+        a {
+            color: var(--accent);
+        }
+
+        .de, .en {
             display: none;
+        }
+
+        .contact {
+            font-size: 0.95rem;
+            margin-top: 0.5rem;
         }
     </style>
 </head>
-<body>
+<body class="light">
+    <button class="lang-toggle" onclick="toggleLanguage()">EN/DE</button>
     <header>
+        <img src="profilbild.jpg" alt="Profilbild Kirsten Rieger">
         <h1>Kirsten Rieger</h1>
-        <p>Transformation Managerin · Digitalisierung · Change Leadership</p>
-        <p><a href="mailto:kirsten.rieger@web.de">kirsten.rieger@web.de</a> · <a href="https://www.linkedin.com/in/kirsten-rieger-8057bb130" target="_blank">LinkedIn</a></p>
-        <button class="lang-toggle" onclick="toggleLanguage()">EN/DE</button>
+        <p class="role de">Transformation Managerin · Digitalisierung · Change Leadership</p>
+        <p class="role en">Transformation Manager · Digitalization · Change Leadership</p>
+        <p class="contact">
+            ✉️ <a href="mailto:kirsten.rieger@web.de">kirsten.rieger@web.de</a><br>
+            📞 +49 173 200 34 79<br>
+            🔗 <a href="https://www.linkedin.com/in/kirsten-rieger-8057bb130" target="_blank">LinkedIn</a>
+        </p>
     </header>
     <main>
         <section>
@@ -150,16 +175,17 @@
         </section>
     </main>
     <footer>
-        &copy; 2025 Kirsten Rieger · Portfolio mit GitHub Pages
+        &copy; 2025 Kirsten Rieger · GitHub Portfolio
     </footer>
     <script>
         let currentLang = 'de';
         function toggleLanguage() {
-            document.querySelectorAll('.de').forEach(el => el.style.display = currentLang === 'de' ? 'none' : 'block');
-            document.querySelectorAll('.en').forEach(el => el.style.display = currentLang === 'de' ? 'block' : 'none');
             currentLang = currentLang === 'de' ? 'en' : 'de';
+            document.body.className = currentLang === 'de' ? 'light' : 'dark';
+            document.querySelectorAll('.de').forEach(el => el.style.display = currentLang === 'de' ? 'block' : 'none');
+            document.querySelectorAll('.en').forEach(el => el.style.display = currentLang === 'de' ? 'none' : 'block');
         }
-        toggleLanguage();  // set initial language to EN
+        toggleLanguage(); // Set to EN initially
     </script>
 </body>
 </html>
