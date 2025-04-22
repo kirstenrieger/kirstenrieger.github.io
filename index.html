@@ -35,10 +35,21 @@
     }
 
     header {
-      position: relative; 
-     }
+      position: relative;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(8px);
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #ccc;
+    }
 
-      body.dark header {
+    body.dark header {
       background: rgba(18, 18, 18, 0.9);
       border-bottom: 1px solid #444;
     }
@@ -55,7 +66,7 @@
       font-weight: 500;
     }
 
-  .lang-toggle {
+    .lang-toggle {
       position: absolute;
       top: 1rem;
       right: 1rem;
@@ -67,7 +78,6 @@
       cursor: pointer;
       z-index: 1100;
     }
-
 
     .hero {
       display: flex;
@@ -81,7 +91,9 @@
 
     .hero img {
       width: 180px;
-      border-radius: 50%;
+      height: 180px;
+      border-radius: 20px;
+      object-fit: cover;
       box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     }
 
@@ -121,6 +133,36 @@
 
     .de, .en {
       display: none;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .hero img {
+        width: 140px;
+        height: 140px;
+      }
+
+      .hero-text h2 {
+        font-size: 1.4rem;
+      }
+
+      .hero-text p {
+        font-size: 1rem;
+        margin: 0 auto;
+      }
+
+      section {
+        padding: 1rem;
+      }
+
+      header nav {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
     }
   </style>
 </head>
@@ -184,15 +226,12 @@
 
   <script>
     let currentLang = 'de';
-
     function toggleLanguage() {
       currentLang = currentLang === 'de' ? 'en' : 'de';
       document.body.className = currentLang === 'de' ? 'light' : 'dark';
-
       document.querySelectorAll('.de').forEach(el => el.style.display = currentLang === 'de' ? 'block' : 'none');
       document.querySelectorAll('.en').forEach(el => el.style.display = currentLang === 'de' ? 'none' : 'block');
     }
-
     document.addEventListener("DOMContentLoaded", () => {
       toggleLanguage();
     });
