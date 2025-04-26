@@ -153,20 +153,61 @@
   </style>
 </head>
 <body class="light">
-  <header>
-    <h1 class="de">Kirsten Rieger</h1>
-    <h1 class="en">Kirsten Rieger</h1>
+<header>
+  <div class="logo">
+    <h1>Kirsten Rieger</h1>
+  </div>
+  <div class="navigation">
     <nav>
       <a href="#about" class="de">Über mich</a>
-      <a href="#about" class="en">About me</a>
       <a href="#experience" class="de">Erfahrung</a>
-      <a href="#experience" class="en">Experience</a>
       <a href="#contact" class="de">Kontakt</a>
+
+      <a href="#about" class="en">About me</a>
+      <a href="#experience" class="en">Experience</a>
       <a href="#contact" class="en">Contact</a>
     </nav>
     <button class="lang-toggle" onclick="toggleLanguage()">EN/DE</button>
-  </header>
+  </div>
+</header>
 
+  header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #ddd;
+  z-index: 1000;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.lang-toggle {
+  margin-left: 1.5rem;
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
   <div class="hero">
     <img src="profilbild.jpg" alt="Kirsten Rieger Portrait">
     <div class="hero-text">
