@@ -1,7 +1,8 @@
 
 # Kirsten Rieger · Online Portfolio (DE/EN)
 
-Willkommen auf meiner persönlichen Portfolio-Seite. Diese Seite ist zweisprachig aufgebaut (DE/EN) und nutzt einen Sprachumschalter (Toggle oben rechts).  
+Willkommen auf meiner persönlichen Portfolio-Seite. 
+Diese Seite ist zweisprachig aufgebaut (DE/EN) und nutzt einen Sprachumschalter (Toggle oben rechts).  
 
 Hier finden Sie:
 - Mein Motivationsschreiben
@@ -15,7 +16,8 @@ Diese Seite wurde erstellt mit [GitHub Pages](https://pages.github.com).
 
 ---
 
-Welcome to my personal portfolio page. This site is bilingual (GER/EN) and features a toggle button (top right) to switch between languages.  
+Welcome to my personal portfolio page. 
+This site is bilingual (GER/EN) and features a toggle button (top right) to switch between languages.  
 
 This page features:
 - My cover letter
