@@ -1,47 +1,32 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kirsten Rieger – Portfolio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     :root {
-      --text-light: #222;
-      --text-dark: #f0f0f0;
+      --bg-color: #f7f7f7;
+      --text-color: #222222;
       --accent: #0099ff;
     }
 
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      scroll-behavior: smooth;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      background-image: url('https://www.toptal.com/designers/subtlepatterns/patterns/asfalt-light.png');
       background-repeat: repeat;
-      background-size: auto;
       background-attachment: fixed;
-    }
-
-    body.light {
-      color: var(--text-light);
-      background-image: url('asfalt-light.png');
-      background-attachment: fixed;
-
-    }
-
-    body.dark {
-      color: var(--text-dark);
-      background-image: url('asfalt-dark.png');
-      background-attachment: fixed;
-
+      scroll-behavior: smooth;
     }
 
     header {
-      position: relative;
-      width: 100%;
+      position: sticky;
       top: 0;
-      left: 0;
-      background: rgba(255, 255, 255, 0.85);
+      background: rgba(255, 255, 255, 0.95);
       backdrop-filter: blur(8px);
       z-index: 1000;
       display: flex;
@@ -49,11 +34,6 @@
       align-items: center;
       padding: 1rem 2rem;
       border-bottom: 1px solid #ccc;
-    }
-
-    body.dark header {
-      background: rgba(18, 18, 18, 0.9);
-      border-bottom: 1px solid #444;
     }
 
     header h1 {
@@ -72,8 +52,8 @@
       position: absolute;
       top: 1rem;
       right: 1rem;
-      background: #333;
-      color: #fff;
+      background: var(--accent);
+      color: white;
       border: none;
       padding: 0.4rem 0.8rem;
       border-radius: 6px;
@@ -84,10 +64,9 @@
     .hero {
       display: flex;
       align-items: center;
-      justify-content: center;
-      padding-top: 7rem;
-      padding-bottom: 4rem;
-      gap: 3rem;
+      justify-content: flex-start;
+      padding: 8rem 2rem 2rem;
+      gap: 2rem;
       flex-wrap: wrap;
     }
 
@@ -99,6 +78,10 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     }
 
+    .hero-text {
+      max-width: 600px;
+    }
+
     .hero-text h2 {
       margin: 0;
       font-size: 2rem;
@@ -107,7 +90,6 @@
     .hero-text p {
       margin-top: 0.5rem;
       font-size: 1.1rem;
-      max-width: 500px;
     }
 
     section {
@@ -133,7 +115,12 @@
       color: var(--accent);
     }
 
-    a i:hover {
+    .social-icons a {
+      margin: 0 10px;
+      font-size: 1.8rem;
+    }
+
+    .social-icons a i:hover {
       transform: scale(1.2);
       transition: all 0.2s ease-in-out;
     }
@@ -142,78 +129,56 @@
       display: none;
     }
 
-    @media (max-width: 600px) {
-      header {
-          padding; 1rem;
-      } 
-      
-      header img {
-        width: 100px;
-        height: 100px;
-      } 
-      
+    @media (max-width: 768px) {
       .hero {
         flex-direction: column;
         text-align: center;
+      }
+
+      .hero-text h2 {
+        font-size: 1.6rem;
       }
 
       .hero img {
         width: 140px;
         height: 140px;
       }
-
-      .hero-text h2 {
-        font-size: 1.4rem;
-      }
-
-      .hero-text p {
-        font-size: 1rem;
-        margin: 0 auto;
-      }
-
-      section {
-        padding: 1rem;
-      }
-
-      header nav {
-        flex-wrap: wrap;
-        justify-content: center;
-      }
     }
   </style>
 </head>
 <body class="light">
   <header>
-    <h1>Kirsten Rieger</h1>
+    <h1 class="de">Kirsten Rieger</h1>
+    <h1 class="en">Kirsten Rieger</h1>
     <nav>
-      <a href="#about">Über mich</a>
-      <a href="#experience">Erfahrung</a>
-      <a href="#contact">Kontakt</a>
+      <a href="#about" class="de">Über mich</a>
+      <a href="#about" class="en">About me</a>
+      <a href="#experience" class="de">Erfahrung</a>
+      <a href="#experience" class="en">Experience</a>
+      <a href="#contact" class="de">Kontakt</a>
+      <a href="#contact" class="en">Contact</a>
     </nav>
     <button class="lang-toggle" onclick="toggleLanguage()">EN/DE</button>
   </header>
 
   <div class="hero">
-    <img src="profilbild.jpg" alt="Kirsten Rieger Portrait" />
+    <img src="profilbild.jpg" alt="Kirsten Rieger Portrait">
     <div class="hero-text">
       <h2 class="de">Digital Transformation Managerin | Change Leadership</h2>
       <h2 class="en">Digital Transformation Manager | Change Leadership</h2>
-      <p class="de">Transformation gestalten – mit strategischem Weitblick, strukturierter Umsetzung und Fokus auf Menschen, Prozesse und Wirkung.</p>
-      <p class="en">Shaping transformation – with strategic vision, structured execution, and a focus on people, processes, and impact.</p>
+      <p class="de">Ich gestalte Transformation mit System und Leidenschaft – von der Idee bis zur erfolgreichen Umsetzung.</p>
+      <p class="en">I drive transformation with purpose and structure – from strategy to sustainable implementation.</p>
     </div>
   </div>
 
   <section id="about">
     <div class="de">
       <h2>Über mich</h2>
-      <p>Transformation Managerin mit langjähriger internationaler Umsetzungskraft. Umfassende Erfahrung in der Leitung komplexer Transformations- und Digitalisierungsprojekte innerhalb von Konzernstrukturen – mit Schwerpunkt auf Change-Management, agiler Zusammenarbeit, Stakeholder-Kommunikation sowie dem Aufbau von Multiprojektsteuerungen. Ich verbinde strategisches Denken, eine strukturierte Arbeitsweise und einen klaren Blick für Menschen, Prozesse und Wirkung. Mit Begeisterung unterstütze ich Organisationen dabei, Wandel nachhaltig und erfolgreich zu gestalten.r.</p>
+      <p>Ich gestalte Veränderung mit Klarheit, Energie und einem systemischen Blick – von der Strategie bis zur nachhaltigen Umsetzung. Als Führungskraft und Coach entwickle ich Organisationen, Teams und Prozesse zukunftsfähig weiter.</p>
     </div>
     <div class="en">
       <h2>About me</h2>
-      <p>Transformation Manager with extensive international implementation expertise.
-Proven track record in leading complex transformation and digitalization projects within corporate structures – focusing on change management, agile collaboration, stakeholder communication, and the development of multi-project management frameworks.
-Her approach combines strategic thinking, structured working methods, and a clear focus on people, processes, and impact.
-She is passionate about supporting organizations in shaping sustainable and successful transformations./p>
+      <p>I shape change with clarity, energy and a systemic mindset – from strategy to lasting implementation. As a leader and coach, I guide organizations, teams and processes into a sustainable digital future.</p>
     </div>
   </section>
 
@@ -237,25 +202,32 @@ She is passionate about supporting organizations in shaping sustainable and succ
       <h2>Contact</h2>
       <p>I welcome new impulses, collaborations and opportunities. Best way to get in touch is via LinkedIn or email.</p>
     </div>
-    <div style="text-align: center; margin-top: 1rem;">
-      <a href="https://www.linkedin.com/in/kirsten-rieger-8057bb130" target="_blank" title="LinkedIn" style="margin: 0 10px; font-size: 1.8rem;">
+    <div class="social-icons" style="text-align: center; margin-top: 1rem;">
+      <a href="https://www.linkedin.com/in/kirsten-rieger-8057bb130" target="_blank" title="LinkedIn">
         <i class="fab fa-linkedin"></i>
       </a>
-      <a href="mailto:kirsten.rieger@web.de" title="E-Mail schreiben" style="margin: 0 10px; font-size: 1.8rem;">
+      <a href="mailto:kirsten.rieger@web.de" title="E-Mail schreiben">
         <i class="fas fa-envelope"></i>
       </a>
     </div>
   </section>
 
   <footer>
-    &copy; 2025 Kirsten Rieger · GitHub Portfolio
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/kirsten-rieger-8057bb130" target="_blank" title="LinkedIn">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="mailto:kirsten.rieger@web.de" title="E-Mail schreiben">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </div>
+    <p style="margin-top: 1rem;">&copy; 2025 Kirsten Rieger · GitHub Portfolio</p>
   </footer>
 
   <script>
-    let currentLang = 'en';
+    let currentLang = 'de';
     function toggleLanguage() {
       currentLang = currentLang === 'de' ? 'en' : 'de';
-      document.body.className = currentLang === 'de' ? 'light' : 'dark';
       document.querySelectorAll('.de').forEach(el => el.style.display = currentLang === 'de' ? 'block' : 'none');
       document.querySelectorAll('.en').forEach(el => el.style.display = currentLang === 'de' ? 'none' : 'block');
     }
