@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -5,21 +6,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kirsten Rieger – Portfolio</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg-color: #f7f7f7;
-      --text-color: #222222;
+      --text-color: #222;
       --accent: #0099ff;
+      --card-bg: #ffffff;
+      --shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     }
 
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Lato', sans-serif;
       background-color: var(--bg-color);
-      color: var(--text-color);
       background-image: url('https://www.toptal.com/designers/subtlepatterns/patterns/asfalt-light.png');
       background-repeat: repeat;
       background-attachment: fixed;
+      color: var(--text-color);
       scroll-behavior: smooth;
     }
 
@@ -28,17 +32,16 @@
       top: 0;
       background: rgba(255, 255, 255, 0.95);
       backdrop-filter: blur(8px);
-      z-index: 1000;
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 1rem 2rem;
-      border-bottom: 1px solid #ccc;
+      border-bottom: 1px solid #ddd;
+      z-index: 1000;
     }
 
     header h1 {
       font-size: 1.2rem;
-      margin: 0;
     }
 
     nav a {
@@ -46,6 +49,7 @@
       text-decoration: none;
       color: var(--accent);
       font-weight: 500;
+      font-size: 1rem;
     }
 
     .lang-toggle {
@@ -58,71 +62,83 @@
       padding: 0.4rem 0.8rem;
       border-radius: 6px;
       cursor: pointer;
-      z-index: 1100;
     }
 
     .hero {
       display: flex;
       align-items: center;
-      justify-content: flex-start;
-      padding: 8rem 2rem 2rem;
-      gap: 2rem;
+      justify-content: center;
+      padding: 6rem 2rem 2rem;
+      gap: 3rem;
       flex-wrap: wrap;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
 
     .hero img {
-      width: 180px;
-      height: 180px;
+      width: 200px;
+      height: 200px;
       border-radius: 20px;
       object-fit: cover;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    }
-
-    .hero-text {
-      max-width: 600px;
+      box-shadow: var(--shadow);
     }
 
     .hero-text h2 {
       margin: 0;
       font-size: 2rem;
+      color: var(--accent);
     }
 
     .hero-text p {
       margin-top: 0.5rem;
       font-size: 1.1rem;
+      max-width: 500px;
     }
 
     section {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 2rem auto;
       padding: 1rem 2rem;
     }
 
+    .card {
+      background: var(--card-bg);
+      padding: 2rem;
+      margin: 1rem 0;
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
     h2 {
       font-size: 1.5rem;
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 0.3rem;
       color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    .social-icons a {
+      margin: 0 10px;
+      font-size: 1.8rem;
+      color: var(--accent);
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.2);
+      transition: all 0.2s ease-in-out;
     }
 
     footer {
       text-align: center;
       padding: 2rem;
       font-size: 0.9rem;
-    }
-
-    a {
-      color: var(--accent);
-    }
-
-    .social-icons a {
-      margin: 0 10px;
-      font-size: 1.8rem;
-    }
-
-    .social-icons a i:hover {
-      transform: scale(1.2);
-      transition: all 0.2s ease-in-out;
     }
 
     .de, .en {
@@ -132,16 +148,6 @@
     @media (max-width: 768px) {
       .hero {
         flex-direction: column;
-        text-align: center;
-      }
-
-      .hero-text h2 {
-        font-size: 1.6rem;
-      }
-
-      .hero img {
-        width: 140px;
-        height: 140px;
       }
     }
   </style>
@@ -172,33 +178,33 @@
   </div>
 
   <section id="about">
-    <div class="de">
+    <div class="card de">
       <h2>Über mich</h2>
       <p>Ich gestalte Veränderung mit Klarheit, Energie und einem systemischen Blick – von der Strategie bis zur nachhaltigen Umsetzung. Als Führungskraft und Coach entwickle ich Organisationen, Teams und Prozesse zukunftsfähig weiter.</p>
     </div>
-    <div class="en">
+    <div class="card en">
       <h2>About me</h2>
       <p>I shape change with clarity, energy and a systemic mindset – from strategy to lasting implementation. As a leader and coach, I guide organizations, teams and processes into a sustainable digital future.</p>
     </div>
   </section>
 
   <section id="experience">
-    <div class="de">
+    <div class="card de">
       <h2>Berufserfahrung</h2>
       <p>(Hier wird die chronologische Erfahrung aus dem Lebenslauf eingefügt – folgt im nächsten Schritt)</p>
     </div>
-    <div class="en">
+    <div class="card en">
       <h2>Experience</h2>
       <p>(Work experience will be added here – pulled from your CV in the next step)</p>
     </div>
   </section>
 
   <section id="contact">
-    <div class="de">
+    <div class="card de">
       <h2>Kontakt</h2>
       <p>Ich freue mich über Impulse, Kooperationen und neue Wege. Kontakt am besten über LinkedIn oder E-Mail.</p>
     </div>
-    <div class="en">
+    <div class="card en">
       <h2>Contact</h2>
       <p>I welcome new impulses, collaborations and opportunities. Best way to get in touch is via LinkedIn or email.</p>
     </div>
